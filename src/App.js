@@ -2,6 +2,8 @@
 
 const tempVar = 223;
 
+console.log(tempVar2);
+
 function App() {
   return (
     <>
