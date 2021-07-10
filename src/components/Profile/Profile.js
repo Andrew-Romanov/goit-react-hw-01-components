@@ -1,7 +1,8 @@
 import PropTypes, { number } from 'prop-types';
 import styles from './Profile.module.scss';
+import dummyUser from './user.svg';
 
-const Profile = ({name, tag, location, avatar, stats}) => {
+const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
     <div className={styles.Profile}>
       <img className={styles.Profile__Avatar} src={avatar} alt={name}></img>
@@ -11,19 +12,25 @@ const Profile = ({name, tag, location, avatar, stats}) => {
       <ul className={styles.Profile__Stats}>
         <li className={styles.Profile__StatsItem}>
           <span className={styles.Profile__StatsItemLabel}>Followers</span>
-          <span className={styles.Profile__StatsItemQuantity}>{stats.followers}</span>
+          <span className={styles.Profile__StatsItemQuantity}>
+            {stats.followers}
+          </span>
         </li>
         <li className={styles.Profile__StatsItem}>
           <span className={styles.Profile__StatsItemLabel}>Views</span>
-          <span className={styles.Profile__StatsItemQuantity}>{stats.views}</span>
+          <span className={styles.Profile__StatsItemQuantity}>
+            {stats.views}
+          </span>
         </li>
         <li className={styles.Profile__StatsItem}>
           <span className={styles.Profile__StatsItemLabel}>Likes</span>
-          <span className={styles.Profile__StatsItemQuantity}>{stats.likes}</span>
+          <span className={styles.Profile__StatsItemQuantity}>
+            {stats.likes}
+          </span>
         </li>
       </ul>
     </div>
-  )
+  );
 };
 
 Profile.propTypes = {
@@ -32,6 +39,10 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string,
   stats: PropTypes.objectOf(number).isRequired,
+};
+
+Profile.defaultProps = {
+  avatar: dummyUser,
 };
 
 export default Profile;
