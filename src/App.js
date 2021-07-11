@@ -7,7 +7,8 @@ import Statistics from './components/Statistics/Statistics';
 import statisticalData from './components/Statistics/statistical-data.json';
 import FriendList from './components/FriendList/FriendList';
 import friendsData from './components/FriendList/friends.json';
-// import './App.css';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import transactionsData from './components/TransactionHistory/transactions.json';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
       <FriendList friendsData={friendsData} />
 
       <Subheader>Task 4. Transaction History</Subheader>
+      <TransactionHistory transactionsData={transactionsData} />
     </MainContainer>
   );
 };

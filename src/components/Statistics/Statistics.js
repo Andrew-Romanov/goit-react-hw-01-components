@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './Statistics.module.scss';
-
-const randomColor = () =>
-  `rgba(${Math.floor(Math.random() * 255)}, 
-  ${Math.floor(Math.random() * 255)}, 
-  ${Math.floor(Math.random() * 255)}, 0.8)`;
+import randomColor from '../../utils/random-color';
 
 const Statistics = ({ title, stats }) => {
   return (

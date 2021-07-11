@@ -1,11 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './FriendListItem.module.scss';
 import dummyUser from './user.svg';
-
-const randomColor = () =>
-  `rgba(${Math.floor(Math.random() * 255)}, 
-  ${Math.floor(Math.random() * 255)}, 
-  ${Math.floor(Math.random() * 255)}, 0.8)`;
+import randomColor from '../../../utils/random-color';
 
 const FriendListItem = ({ isOnline, avatar, name }) => {
   return (
