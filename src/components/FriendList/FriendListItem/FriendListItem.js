@@ -1,4 +1,4 @@
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './FriendListItem.module.scss';
 import dummyUser from './user.svg';
 
@@ -8,7 +8,6 @@ const randomColor = () =>
   ${Math.floor(Math.random() * 255)}, 0.8)`;
 
 const FriendListItem = ({ isOnline, avatar, name }) => {
-  console.log(isOnline);
   return (
     <>
       <span
