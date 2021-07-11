@@ -11,18 +11,18 @@ const Statistics = ({ title, stats }) => {
     <section className={styles.Statistics}>
       {title && <h2 className={styles.Statistics__Title}>{title}</h2>}
       <ul className={styles.Statistics__StatsList}>
-        {stats.map(el => {
+        {stats.map(({ id, label, percentage }) => {
           return (
             <li
-              key={el.id}
+              key={id}
               className={styles.Statistics__StatsListItem}
               style={{ backgroundColor: randomColor() }}
             >
               <span className={styles.Statistics__StatsListItemLabel}>
-                {el.label}
+                {label}
               </span>
               <span className={styles.Statistics__StatsListItemPercentage}>
-                {el.percentage}%
+                {percentage}%
               </span>
             </li>
           );

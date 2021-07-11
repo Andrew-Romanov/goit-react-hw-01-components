@@ -1,0 +1,30 @@
+.FriendListItem {
+  &__Is {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-left: 70px;
+
+    &Online {
+      composes: FriendListItem__Is;
+      background-color: lightgreen;
+    }
+
+    &Offline {
+      composes: FriendListItem__Is;
+      background-color: lightcoral;
+    }
+  }
+
+  &__Avatar {
+    margin-right: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__UserName {
+    font-size: 24px;
+  }
+}

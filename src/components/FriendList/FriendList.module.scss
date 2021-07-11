@@ -1,0 +1,36 @@
+.FriendList {
+  width: 480px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: lightslategray;
+  margin-top: 10px;
+  text-align: center;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+
+  &__Title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 23px;
+    color: white;
+  }
+
+  &__Items {
+    display: flex;
+    flex-direction: column;
+    margin: -8px;
+  }
+
+  &__Item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}

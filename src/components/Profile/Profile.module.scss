@@ -31,13 +31,15 @@
 
   &__Stats {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 22px -8px -8px;
 
     &Item {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin: 8px;
       background-color: rgba(255, 255, 255, 0.8);
       width: 100px;
       height: 100px;
